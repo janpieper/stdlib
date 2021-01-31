@@ -113,7 +113,7 @@ pub external fn lowercase(String) -> String =
 pub external fn uppercase(String) -> String =
   "string" "uppercase"
 
-/// Compares two strings to see which is "larger" by comparing their graphemes.
+/// Compare two strings to see which is "larger" by comparing their graphemes.
 ///
 /// This does not compare the size or length of the given strings.
 ///
@@ -253,7 +253,7 @@ pub fn split(x: String, on substring: String) -> List(String) {
 external fn erl_split(String, String) -> List(String) =
   "string" "split"
 
-/// Splits a string a single time on the given substring.
+/// Split a string a single time on the given substring.
 ///
 /// Returns an error if substring not present.
 ///
