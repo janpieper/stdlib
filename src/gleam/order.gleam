@@ -12,7 +12,7 @@ pub type Order {
   Gt
 }
 
-/// Inverts an order, so less-than becomes greater-than and greater-than
+/// Invert an order, so less-than becomes greater-than and greater-than
 /// becomes less-than.
 ///
 /// ## Examples
@@ -34,7 +34,7 @@ pub fn reverse(order: Order) -> Order {
   }
 }
 
-/// Produces a numeric representation of the order.
+/// Produce a numeric representation of the order.
 ///
 /// ## Examples
 ///
@@ -55,7 +55,7 @@ pub fn to_int(order: Order) -> Int {
   }
 }
 
-/// Compares two Order values to one another, producing a new Order.
+/// Compare two Order values to one another, producing a new Order.
 ///
 /// ## Examples
 ///
@@ -70,7 +70,7 @@ pub fn compare(a: Order, with b: Order) -> Order {
   }
 }
 
-/// Returns the largest of two orders.
+/// Return the largest of two orders.
 ///
 /// ## Examples
 ///
@@ -85,7 +85,7 @@ pub fn max(a: Order, b: Order) -> Order {
   }
 }
 
-/// Returns the smallest of two orders.
+/// Return the smallest of two orders.
 ///
 /// ## Examples
 ///
