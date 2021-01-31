@@ -180,7 +180,7 @@ fn do_filter(list: List(a), fun: fn(a) -> Bool, acc: List(a)) -> List(a) {
   }
 }
 
-/// Returns a new list containing only the elements from the first list for
+/// Return a new list containing only the elements from the first list for
 /// which the given functions returns `True`.
 ///
 /// ## Examples
@@ -212,7 +212,7 @@ fn do_filter_map(
   }
 }
 
-/// Returns a new list containing only the elements from the first list for
+/// Return a new list containing only the elements from the first list for
 /// which the given functions returns `Ok(_)`.
 ///
 /// ## Examples
@@ -234,7 +234,7 @@ fn do_map(list: List(a), fun: fn(a) -> b, acc: List(b)) -> List(b) {
   }
 }
 
-/// Returns a new list containing only the elements of the first list after the
+/// Return a new list containing only the elements of the first list after the
 /// function has been applied to each one.
 ///
 /// ## Examples
@@ -258,7 +258,7 @@ fn do_index_map(
   }
 }
 
-/// Returns a new list containing only the elements of the first list after the
+/// Return a new list containing only the elements of the first list after the
 /// function has been applied to each one and their index.
 ///
 /// The index starts at 0, so the first element is 0, the second is 1, and so
@@ -288,7 +288,7 @@ fn do_try_map(
   }
 }
 
-/// Takes a function that returns a Result applies it to each element in a
+/// Take a function that returns a Result applies it to each element in a
 /// given list in tern.
 ///
 /// If the function returns `Ok(new_value)` for all elements in the list then a
@@ -319,7 +319,7 @@ pub fn try_map(
   do_try_map(list, fun, [])
 }
 
-/// Returns a list that is the given list with up to the given number of
+/// Return a list that is the given list with up to the given number of
 /// elements removed from the front of the list.
 ///
 /// If the element has less than the number of elements an empty list is
@@ -357,7 +357,7 @@ fn do_take(list: List(a), n: Int, acc: List(a)) -> List(a) {
   }
 }
 
-/// Returns a list containing the first given number of elements from the given
+/// Return a list containing the first given number of elements from the given
 /// list.
 ///
 /// If the element has less than the number of elements then the full list is
@@ -377,7 +377,7 @@ pub fn take(from list: List(a), up_to n: Int) -> List(a) {
   do_take(list, n, [])
 }
 
-/// Returns a new empty list.
+/// Return a new empty list.
 ///
 /// ## Examples
 ///
@@ -408,7 +408,7 @@ fn do_flatten(lists: List(List(a)), acc: List(a)) -> List(a) {
   }
 }
 
-/// Flattens a list of lists into a single list.
+/// Flatten a list of lists into a single list.
 ///
 /// This function runs in linear time, and it traverses and copies all the
 /// inner lists.
@@ -617,7 +617,7 @@ pub fn find_map(
   }
 }
 
-/// Returns True if the given function returns True for all the elements in
+/// Return True if the given function returns True for all the elements in
 /// the given list. If the function returns False for any of the elements it
 /// immediately returns False without checking the rest of the list.
 ///
@@ -643,7 +643,7 @@ pub fn all(in list: List(a), satisfying predicate: fn(a) -> Bool) -> Bool {
   }
 }
 
-/// Returns True if the given function returns True for any the elements in
+/// Return True if the given function returns True for any the elements in
 /// the given list. If the function returns True for any of the elements it
 /// immediately returns True without checking the rest of the list.
 ///
@@ -672,7 +672,7 @@ pub fn any(in list: List(a), satisfying predicate: fn(a) -> Bool) -> Bool {
   }
 }
 
-/// Takes two lists and returns a single list of 2 item tuples.
+/// Take two lists and returns a single list of 2 item tuples.
 ///
 /// If one of the lists is longer than the other the remaining elements from
 /// the longer list are not used.
@@ -699,7 +699,7 @@ pub fn zip(xs: List(a), ys: List(b)) -> List(tuple(a, b)) {
   }
 }
 
-/// Takes two lists and returns a single list of 2 item tuples.
+/// Take two lists and returns a single list of 2 item tuples.
 ///
 /// If one of the lists is longer than the other an Error is returned.
 ///
@@ -734,7 +734,7 @@ fn do_unzip(input, xs, ys) {
   }
 }
 
-/// Takes a single list of 2 item tuples and returns two lists.
+/// Take a single list of 2 item tuples and returns two lists.
 ///
 /// ## Examples
 ///
@@ -1045,7 +1045,7 @@ fn do_pop_map(haystack, mapper, checked) {
   }
 }
 
-/// Removes the first element in a given list for which the given function returns
+/// Remove the first element in a given list for which the given function returns
 /// `Ok(new_value)` and return the new value as well as list with the value removed.
 ///
 /// Returns `Error(Nil)` if no the function does not return Ok for any of the
