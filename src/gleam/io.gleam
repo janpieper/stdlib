@@ -3,7 +3,7 @@ external type DoNotLeak
 external fn erl_print(String, List(a)) -> DoNotLeak =
   "io" "fwrite"
 
-/// Writes a string to standard output.
+/// Write a string to standard output.
 ///
 /// ## Example
 ///
@@ -16,7 +16,7 @@ pub fn print(string: String) -> Nil {
   Nil
 }
 
-/// Writes a string to standard output, appending a newline to the end.
+/// Write a string to standard output, appending a newline to the end.
 ///
 /// ## Example
 ///
@@ -63,7 +63,7 @@ pub type GetLineError {
   NoData
 }
 
-/// Reads a line from standard input with the given prompt.
+/// Read a line from standard input with the given prompt.
 ///
 /// # Example
 ///
