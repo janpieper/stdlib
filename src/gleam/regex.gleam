@@ -75,7 +75,7 @@ pub fn from_string(pattern: String) -> Result(Regex, CompileError) {
   compile(pattern, Options(case_insensitive: False, multi_line: False))
 }
 
-/// Returns a boolean indicating whether there was a match or not.
+/// Return a boolean indicating whether there was a match or not.
 ///
 /// ## Examples
 ///
@@ -100,7 +100,7 @@ pub external fn check(with: Regex, content: String) -> Bool =
 pub external fn split(with: Regex, content: String) -> List(String) =
   "gleam_stdlib" "regex_split"
 
-/// Collects all matches of the regular expression.
+/// Collect all matches of the regular expression.
 ///
 /// ## Examples
 ///
