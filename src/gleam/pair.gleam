@@ -1,4 +1,4 @@
-/// Returns the first element in a pair.
+/// Return the first element in a pair.
 ///
 /// ## Examples
 ///
@@ -10,7 +10,7 @@ pub fn first(pair: tuple(a, b)) -> a {
   a
 }
 
-/// Returns the second element in a pair.
+/// Return the second element in a pair.
 ///
 /// ## Examples
 ///
@@ -22,7 +22,7 @@ pub fn second(pair: tuple(a, b)) -> b {
   a
 }
 
-/// Returns a new pair with the elements swapped.
+/// Return a new pair with the elements swapped.
 ///
 /// ## Examples
 ///
@@ -34,7 +34,7 @@ pub fn swap(pair: tuple(a, b)) -> tuple(b, a) {
   tuple(b, a)
 }
 
-/// Returns a new pair with the first element having had `with` applied to
+/// Return a new pair with the first element having had `with` applied to
 /// it.
 ///
 /// ## Examples
@@ -47,7 +47,7 @@ pub fn map_first(of pair: tuple(a, b), with fun: fn(a) -> c) -> tuple(c, b) {
   tuple(fun(a), b)
 }
 
-/// Returns a new pair with the second element having had `with` applied to
+/// Return a new pair with the second element having had `with` applied to
 /// it.
 ///
 /// ## Examples
