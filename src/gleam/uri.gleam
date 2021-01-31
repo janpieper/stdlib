@@ -44,7 +44,7 @@ type UriKey {
   Fragment
 }
 
-/// Parses a compliant URI string into the `Uri` Type.
+/// Parse a compliant URI string into the `Uri` Type.
 /// If the string is not a valid URI string then an error is returned.
 ///
 /// The opposite operation is `uri.to_string`
@@ -76,7 +76,7 @@ pub fn parse(string: String) -> Result(Uri, Nil) {
 external fn erl_parse_query(String) -> Dynamic =
   "uri_string" "dissect_query"
 
-/// Parses an urlencoded query string into a list of key value pairs.
+/// Parse an urlencoded query string into a list of key value pairs.
 /// Returns an error for invalid encoding.
 ///
 /// The opposite operation is `uri.query_to_string`.
