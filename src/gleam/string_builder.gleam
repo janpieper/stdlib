@@ -52,7 +52,7 @@ pub external fn append_builder(
 pub external fn from_strings(List(String)) -> StringBuilder =
   "gleam_stdlib" "identity"
 
-/// Joins a list of builders into a single builder.
+/// Join a list of builders into a single builder.
 ///
 /// Runs in constant time.
 ///
@@ -66,7 +66,7 @@ pub external fn concat(List(StringBuilder)) -> StringBuilder =
 pub external fn from_string(String) -> StringBuilder =
   "gleam_stdlib" "identity"
 
-/// Turns an `StringBuilder` into a `String`
+/// Turn an `StringBuilder` into a `String`
 ///
 /// This function is implemented natively by the virtual machine and is highly
 /// optimised.
@@ -79,24 +79,24 @@ pub external fn to_string(StringBuilder) -> String =
 pub external fn byte_size(StringBuilder) -> Int =
   "erlang" "iolist_size"
 
-/// Creates a builder containing the textual representation of a given float.
+/// Create a builder containing the textual representation of a given float.
 ///
 pub external fn from_float(Float) -> StringBuilder =
   "io_lib_format" "fwrite_g"
 
-/// Converts a builder to a new builder where the contents have been
+/// Convert a builder to a new builder where the contents have been
 /// lowercased.
 ///
 pub external fn lowercase(StringBuilder) -> StringBuilder =
   "string" "lowercase"
 
-/// Converts a builder to a new builder where the contents have been
+/// Convert a builder to a new builder where the contents have been
 /// uppercased.
 ///
 pub external fn uppercase(StringBuilder) -> StringBuilder =
   "string" "uppercase"
 
-/// Converts a builder to a new builder with the contents reversed.
+/// Convert a builder to a new builder with the contents reversed.
 ///
 pub external fn reverse(StringBuilder) -> StringBuilder =
   "string" "reverse"
@@ -108,7 +108,7 @@ type Direction {
 external fn erl_split(StringBuilder, String, Direction) -> List(StringBuilder) =
   "string" "split"
 
-/// Splits a builder on a given pattern into a list of builders.
+/// Split a builder on a given pattern into a list of builders.
 ///
 pub fn split(iodata: StringBuilder, on pattern: String) -> List(StringBuilder) {
   erl_split(iodata, pattern, All)
@@ -122,7 +122,7 @@ external fn erl_replace(
 ) -> StringBuilder =
   "string" "replace"
 
-/// Replaces all instances of a pattern with a given string substitute.
+/// Replace all instances of a pattern with a given string substitute.
 ///
 pub fn replace(
   in iodata: StringBuilder,
