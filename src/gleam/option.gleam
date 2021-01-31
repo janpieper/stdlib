@@ -37,7 +37,7 @@ pub fn is_none(option: Option(a)) -> Bool {
   option == None
 }
 
-/// Converts an Option type to a Result type
+/// Convert an Option type to a Result type
 ///
 /// ## Examples
 ///
@@ -53,7 +53,7 @@ pub fn to_result(option: Option(a), e) -> Result(a, e) {
   }
 }
 
-/// Converts a Result type to an Option type
+/// Convert a Result type to an Option type
 ///
 /// ## Examples
 ///
