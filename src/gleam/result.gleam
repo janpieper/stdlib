@@ -183,7 +183,7 @@ pub fn lazy_unwrap(result: Result(a, e), or default: fn() -> a) -> a {
   }
 }
 
-/// Transforms any error into Error(Nil)
+/// Transform any error into Error(Nil)
 ///
 /// ## Examples
 ///
