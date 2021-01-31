@@ -59,7 +59,7 @@ pub external fn from_list(List(tuple(key, value))) -> Map(key, value) =
 external fn is_key(key, Map(key, v)) -> Bool =
   "maps" "is_key"
 
-/// Determind whether or not a value present in the map for a given key.
+/// Determine whether or not a value is present in the map for a given key.
 ///
 /// ## Examples
 ///
@@ -73,7 +73,7 @@ pub fn has_key(map: Map(k, v), key: k) -> Bool {
   is_key(key, map)
 }
 
-/// Create a fresh map that contains no values.
+/// Create a map that contains no values.
 ///
 pub external fn new() -> Map(key, value) =
   "maps" "new"
